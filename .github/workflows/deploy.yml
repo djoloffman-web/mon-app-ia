@@ -28,9 +28,9 @@ jobs:
         with:
           username: ${{ secrets.FTP_USERNAME }}
           server: ${{ secrets.FTP_SERVER }}
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
-          # Si vous utilisez un mot de passe classique à la place d'une clé SSH, décommentez la ligne ci-dessous :
-          # password: ${{ secrets.FTP_PASSWORD }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          # Si vous utilisez une clé privée SSH (format OpenSSH valide) au lieu du mot de passe :
+          # ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           local_path: './dist/*'
           remote_path: './'
